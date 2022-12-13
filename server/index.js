@@ -11,10 +11,9 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/../client/dist'));
-app.use('/prod',productRouter)
+// app.use('/prod',productRouter)
 
 
-/
 
 
 app.get('/', function (req, res) {
