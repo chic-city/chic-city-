@@ -24,6 +24,9 @@ a {
     background: black;
   }
 }
+
+
+
 .footer {
  
   left:0px;
@@ -31,4 +34,10 @@ a {
   height:30px;
   width:100%;
   background:rgb(43, 42, 42);
+}
+
+.Appp {
+  font-family: sans-serif;
+  text-align: center;
+  
 }
