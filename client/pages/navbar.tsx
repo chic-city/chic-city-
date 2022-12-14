@@ -24,13 +24,16 @@ const Navbar = () => {
                         </ul>
                         
                         <button className="btn  text-dark" type="submit">
-                            <img src='https://res.cloudinary.com/dn9qfvg2p/image/upload/c_scale,w_30/v1671034527/search_pbo7xn.png'/>
+                            <img src='https://res.cloudinary.com/dn9qfvg2p/image/upload/c_scale,w_33/v1671038911/search_1_ok0izd.png'/>
                             </button>
                             <button className="btn  text-dark" type="submit">
                             <img src='https://res.cloudinary.com/dn9qfvg2p/image/upload/c_scale,w_33/v1671035218/bag_ppahl3.png'/>
                             </button>
                             <button className="btn  text-dark" type="submit">
                             <img src='https://res.cloudinary.com/dn9qfvg2p/image/upload/c_scale,w_33/v1671035073/user_xzrvuk.png'/>
+                            </button>
+                            <button className="btn  text-dark" type="submit">
+                            <img src='https://res.cloudinary.com/dn9qfvg2p/image/upload/c_scale,w_30/v1671038723/heart_y4chdf.png'/>
                             </button>
                             
                     </div>
