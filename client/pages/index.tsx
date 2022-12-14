@@ -15,7 +15,7 @@ export default function Home() {
       <Footer/>
   {/* <Link href="/navbar" > navbar</Link>
   <Link href="/footer" > footer</Link> */}
-
+<Link href="/carousel" ></Link>
     </div>
   )
 }
