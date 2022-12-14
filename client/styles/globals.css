@@ -25,3 +25,14 @@ a {
   }
 }
 
+
+
+.footer {
+  position:fixed;
+  left:0px;
+  bottom:200px;
+  height:30px;
+  width:100%;
+  background:rgb(43, 42, 42);
+}
+
