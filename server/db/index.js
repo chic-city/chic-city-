@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var mongoUri = 'mongodb://0.0.0.0/';
+var mongoUri = 'mongodb+srv://suits:suits@cluster0.b1h6cft.mongodb.net/test';
 
 
 
