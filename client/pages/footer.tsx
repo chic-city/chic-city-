@@ -2,10 +2,9 @@ import React from 'react'
 
 const footer = () => {
   return (
-    <div className='footer' 
-    >
+    <div className='footer'>
 
-<>
+
   {/* component */}
   <link
     rel="stylesheet"
@@ -15,7 +14,7 @@ const footer = () => {
     rel="stylesheet"
     href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"
   />
-  <footer className="relative  p-3 mb-2 bg-dark text-white">
+  <footer className=" p-3 mb-2 bg-dark text-white">
     <div className="container mx-auto px-4">
       <div className="flex flex-wrap text-left lg:text-left">
         <div className="w-full lg:w-6/12 px-4">
@@ -159,7 +158,7 @@ const footer = () => {
       </div>
     </div>
   </footer>
-</>
+
   
     </div>
   )
