@@ -30,7 +30,7 @@ async function login(req, res) {
 
     return res
       .status(200)
-      .json({ name: user.name, email: user.email, token, id: user["_id"] });
+      .json({ FirstName: user.FirstName,LastName: user.LastName, email: user.email, token, id: user["_id"] });
   } catch (error) {
     console.log(error);
     res.status(500).send(error);
@@ -40,10 +40,10 @@ async function login(req, res) {
 const register = async (req, res) => {
   try {
     const {
-      body: { name, email, password },
+      body: { FirstName,LastName, email, password },
     } = req;
 
-    if (!name && !email && !password) {
+    if (!FirstName && !LastName && !email && !password) {
       return res.status(301).json({
         message: "Please fill all fields",
       });
@@ -52,7 +52,8 @@ const register = async (req, res) => {
     const newPassword = await bcrypt.hash(password, 10);
 
     const user = new users({
-      name,
+      FirstName,
+      LastName,
       email,
       pwd: newPassword,
     });

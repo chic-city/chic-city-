@@ -3,7 +3,8 @@ const db = require('../db/index.js');
 mongoose.Promise = global.Promise;
 
 var usersSchema = mongoose.Schema({
-    name:String,
+    FirstName:String,
+    LastName:String,
     email:String,
     pwd:String,
     
