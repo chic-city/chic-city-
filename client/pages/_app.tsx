@@ -1,18 +1,6 @@
-// import '../styles/globals.css'
-// import type { AppProps } from 'next/app'
-import {Link} from "react-router-dom"
-export default function App() {
+import '../styles/globals.css'
+import type { AppProps } from 'next/app'
 
-
-return(
-
-<div>
-    <nav> 
-        <Link href="/"><a className="p-2"></a></Link>
-    </nav>
-</div>
-
-)
-
-  
+export default function App({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />
 }
