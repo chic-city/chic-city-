@@ -1,10 +1,13 @@
 import React from 'react'
-
+import Navbar from "./navbar"
+import Footer from './footer'
 const Cart = () => {
   return (
+    
     <div>
-
-<section className="h-100 gradient-custom">
+<Navbar/>
+<section className="h-100 gradient-custom p-5 mb-2 bg-secondary">
+    
   <div className="container py-5">
     <div className="row d-flex justify-content-center my-4">
       <div className="col-md-8">
@@ -14,6 +17,7 @@ const Cart = () => {
           </div>
           <div className="card-body">
             {/* Single item */}
+            
             <div className="row">
               <div className="col-lg-3 col-md-12 mb-4 mb-lg-0">
                 {/* Image */}
@@ -22,76 +26,7 @@ const Cart = () => {
                   data-mdb-ripple-color="light"
                 >
                   <img
-                    src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Vertical/12a.webp"
-                    className="w-100"
-                    alt="Blue Jeans Jacket"
-                  />
-                  <a href="#!">
-                    <div
-                      className="mask"
-                      style={{ backgroundColor: "rgba(251, 251, 251, 0.2)" }}
-                    />
-                  </a>
-                </div>
-                {/* Image */}
-              </div>
-              <div className="col-lg-5 col-md-6 mb-4 mb-lg-0">
-                {/* Data */}
-                <p>
-                  <strong>Blue denim shirt</strong>
-                </p>
-                <p>Color: blue</p>
-                <p>Size: M</p>
-                <button
-                  type="button"
-                  className="btn btn-primary btn-sm me-1 mb-2"
-                  data-mdb-toggle="tooltip"
-                  title="Remove item"
-                >
-                  <i className="fas fa-trash" />
-                </button>
-                
-                {/* Data */}
-              </div>
-              <div className="col-lg-4 col-md-6 mb-4 mb-lg-0">
-                {/* Quantity */}
-                <div className="d-flex mb-4" style={{ maxWidth: 300 }}>
-                  
-                  <div className="form-outline">
-                    <input
-                      id="form1"
-                      min={0}
-                      name="quantity"
-                      defaultValue={1}
-                      type="number"
-                      className="form-control"
-                    />
-                    <label className="form-label" htmlFor="form1">
-                      Quantity
-                    </label>
-                  </div>
-                  
-                </div>
-                {/* Quantity */}
-                {/* Price */}
-                <p className="text-start text-md-center">
-                  <strong>$17.99</strong>
-                </p>
-                {/* Price */}
-              </div>
-            </div>
-            {/* Single item */}
-            <hr className="my-4" />
-            {/* Single item */}
-            <div className="row">
-              <div className="col-lg-3 col-md-12 mb-4 mb-lg-0">
-                {/* Image */}
-                <div
-                  className="bg-image hover-overlay hover-zoom ripple rounded"
-                  data-mdb-ripple-color="light"
-                >
-                  <img
-                    src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Vertical/13a.webp"
+                    src="https://static.fursac.com/data/cache/LandingPage/picture/main/5/d/19.1606245969.jpg"
                     className="w-100"
                   />
                   <a href="#!">
@@ -110,22 +45,7 @@ const Cart = () => {
                 </p>
                 <p>Color: red</p>
                 <p>Size: M</p>
-                <button
-                  type="button"
-                  className="btn btn-primary btn-sm me-1 mb-2"
-                  data-mdb-toggle="tooltip"
-                  title="Remove item"
-                >
-                  <i className="fas fa-trash" />
-                </button>
-                <button
-                  type="button"
-                  className="btn btn-danger btn-sm mb-2"
-                  data-mdb-toggle="tooltip"
-                  title="Move to the wish list"
-                >
-                  <i className="fas fa-heart" />
-                </button>
+                
                 {/* Data */}
               </div>
               <div className="col-lg-4 col-md-6 mb-4 mb-lg-0">
@@ -163,7 +83,7 @@ const Cart = () => {
             <p>
               <strong>Expected shipping delivery</strong>
             </p>
-            <p className="mb-0">12.10.2020 - 14.10.2020</p>
+            <p className="mb-0">{new Date().toLocaleString("en-US", { date : "long"   })}</p>
           </div>
         </div>
         <div className="card mb-4 mb-lg-0">
@@ -189,12 +109,7 @@ const Cart = () => {
               src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/mastercard.svg"
               alt="Mastercard"
             />
-            <img
-              className="me-2"
-              width="45px"
-              src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce/includes/gateways/paypal/assets/images/paypal.webp"
-              alt="PayPal acceptance mark"
-            />
+          
           </div>
         </div>
       </div>
@@ -235,8 +150,9 @@ const Cart = () => {
   </div>
 </section>
 
-
+  <Footer/>
     </div>
+  
   )
 }
 
