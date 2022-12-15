@@ -32,17 +32,31 @@ const Navbar = () => {
                 </a>{" "}
               </li>
 
-              <li className="nav-item">
-                <a className="nav-link text-dark" href="/suits">
-                  Suits
-                </a>{" "}
-              </li>
-              <li className="nav-item">
-                <a className="nav-link text-dark" href="/accessories">
-                  Accessories
-                </a>{" "}
-              </li>
-            </ul>
+
+                            <li className="nav-item">
+                                <a className="nav-link text-dark" href="/clothing">Clothing</a> </li>
+
+                            <li className="nav-item">
+                                <a className="nav-link text-dark" href="/suits">Suits</a> </li>
+                            <li className="nav-item">
+                                <a className="nav-link text-dark" href="/accessories">Accessories</a> </li>
+                        </ul>
+
+                      
+                        <button className="btn  text-dark" type="submit" title="SHOP LIST" onClick={()=>{location.href="/cart"}}>
+                            <img src='https://res.cloudinary.com/dn9qfvg2p/image/upload/c_scale,w_33/v1671035218/bag_ppahl3.png' />
+                        </button>
+                        <button className="btn  text-dark" type="submit" title="LOGIN">
+                            <img src='https://res.cloudinary.com/dn9qfvg2p/image/upload/c_scale,w_33/v1671035073/user_xzrvuk.png' />
+                        </button>
+                        <button className="btn  text-dark" type="submit" title="WISH LIST" onClick={()=>{location.href="/wishlist"}}>
+                            <img src='https://res.cloudinary.com/dn9qfvg2p/image/upload/c_scale,w_30/v1671038723/heart_y4chdf.png'  />
+                        </button>
+
+                    </div>
+                </div>
+            </nav>
+
 
             <div className="input-group rounded w-25 ">
               <input

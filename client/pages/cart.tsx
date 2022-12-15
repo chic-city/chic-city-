@@ -1,7 +1,20 @@
 import React from "react";
 import Navbar from "./navbar";
 import Footer from "./footer";
-const Cart = () => {
+import axios from "axios";
+export const getStaticProps=async()=>{
+  const res=await axios.get("http://localhost:4000/api/cart/cart")
+  const data = await res.data
+
+return {
+  props:{data:data}
+}
+
+}
+const Cart = ({data}:any) => {
+  console.log(data);
+  
+
   return (
     <div>
       <Navbar />
@@ -16,7 +29,8 @@ const Cart = () => {
                 <div className="card-header py-3">
                   <h5 className="mb-0">🛒</h5>
                 </div>
-                <div className="card-body">
+            {data.map((e:any) => { return( 
+            <div className="card-body">
                   {/* Single item */}
 
                   <div className="row">
@@ -25,9 +39,10 @@ const Cart = () => {
                       <div
                         className="bg-image hover-overlay hover-zoom ripple rounded"
                         data-mdb-ripple-color="light"
-                      >
+                      ><span className="close">{" "}<button onClick={()=>{axios.delete(`http://localhost:4000/api/cart/${e._id}`); window.location.reload()}}>delete</button></span>
                         <img
-                          src="https://static.fursac.com/data/cache/LandingPage/picture/main/5/d/19.1606245969.jpg"
+                          src={e.articleImage
+                          }
                           className="w-100"
                         />
                         <a href="#!">
@@ -44,10 +59,10 @@ const Cart = () => {
                     <div className="col-lg-5 col-md-6 mb-4 mb-lg-0">
                       {/* Data */}
                       <p>
-                        <strong>Red hoodie</strong>
+                        <strong>{e.articleName}</strong>
                       </p>
-                      <p>Color: red</p>
-                      <p>Size: M</p>
+                      <p>{e.description}</p>
+                     
 
                       {/* Data */}
                     </div>
@@ -71,28 +86,23 @@ const Cart = () => {
                       <p className="text-start text-md-center">
                         <div className="form-control rounded bg-dark ">
                           {" "}
-                          $17.99
+                        {e.price} DT
                         </div>
                       </p>
                       {/* Price */}
                     </div>
+                    
                   </div>
                   {/* Single item */}
-                </div>
+                </div>)})}
               </div>
               <div className="card mb-4">
                 <div className="card-body">
                   <p>
-                    <strong>Expected shipping delivery </strong>
+                    <strong>Expected shipping delivery in 24 hours</strong>
                   </p>
                   <p className="mb-0">
-                    {new Date().toLocaleDateString("tr-Tr", {
-                      year: "numeric",
-                      month: "2-digit",
-                      day: "2-digit",
-                      hour: "2-digit",
-                      minute: "2-digit",
-                    })}
+                   
                   </p>
                 </div>
               </div>
