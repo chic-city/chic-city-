@@ -35,9 +35,10 @@ a {
 
 
 .body {
-  background-image:url('https://images6.alphacoders.com/357/357152.jpg');
+  background-image:url('https://wallpaperaccess.com/full/4357577.jpg');
   background-position:center;
   background-size:cover;
+  padding-bottom: 416px;
   
   -webkit-font-smoothing: antialiased;
   font: normal 14px Roboto,arial,sans-serif;
@@ -46,8 +47,7 @@ a {
 
 .container {
     padding: 110px;
-    margin-top: auto;
-margin-bottom: auto;
+
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #ffffff!important;
@@ -89,8 +89,5 @@ margin-bottom: auto;
 }
 .wrapper {
     text-align: center;
-}
-.footer {
-    font-size: 18px;
 }
 

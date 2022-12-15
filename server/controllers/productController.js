@@ -7,13 +7,10 @@ const addArticle = async (req, res) => {
       body: {
         articleName,
         articleType,
-        availableQte,
         description,
         availableSizes,
-        availableColor,
-        type,
-        category,
         price,
+        articleImage
       },
     } = req;
 
@@ -26,13 +23,10 @@ const addArticle = async (req, res) => {
     if (
       !articleName ||
       !articleType ||
-      !availableQte ||
       !description ||
       !availableSizes ||
-      !availableColor ||
-      !type ||
-      !category ||
-      !price
+      !price ||
+      !articleImage
     ) {
       return res.status.json({
         message: " please provide all the required fields ",
@@ -42,14 +36,11 @@ const addArticle = async (req, res) => {
     const newArticles = new products({
       articleName,
       articleType,
-      availableQte,
       addedBy: _id,
       description,
       availableSizes,
-      availableColor,
-      type,
-      category,
       price,
+      articleImage,
     });
 
     const art = await newArticles.save();

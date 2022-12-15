@@ -4,17 +4,19 @@ import React from 'react'
 
 const login = () => {
   return (
-    // <div className='body'>
+    <div className='body'>
       
     
-   <center> <div className="container">
+      
+    
+    <div className="container ">
     <div >
         <div className="row h-100 col-sm-7 my-auto ">
               <div className="form-login">
                 <br />
                 <h4 className='h4'>Sign In</h4>
                 <br />
-                <input type="text" id="userName" className="form-control input-sm chat-input" placeholder="username"/>
+                <input type="text" id="userName" className="form-control input-sm chat-input" placeholder="E-mail"/>
                 <br />
                 <input type="text" id="userPassword" className="form-control input-sm chat-input" placeholder="password"/>
                 <br />
@@ -27,11 +29,9 @@ const login = () => {
         </div>
     </div>
     <br />
-    {/* <div className="footer text-white text-center">
-        <p>©  Walid Slim & Co </p>
-    </div> */}
-</div></center>
-// </div>
+</div>
+
+ </div>
   )
 }
 
