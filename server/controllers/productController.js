@@ -1,5 +1,4 @@
 const products = require("../models/productSchema");
-
 const addArticle = async (req, res) => {
   try {
     const {
@@ -36,7 +35,6 @@ const addArticle = async (req, res) => {
     const newArticles = new products({
       articleName,
       articleType,
-      addedBy: _id,
       description,
       availableSizes,
       price,
@@ -50,6 +48,7 @@ const addArticle = async (req, res) => {
     res.status(500).send(error);
   }
 };
+
 const modifyArticle = async (req, res) => {
   try {
     const {
@@ -120,11 +119,26 @@ const myArticles = async (req, res) => {
     res.status(500).send(error);
   }
 };
+const PostArticle = async (req, res) => {
+console.log("hello");
+  const body = req.body
 
+  try {
+    await newArticles.create(body, (err, result) => {
+      if (err) res.json(err)
+      res.json(result)
+      res.status(200)
+    })
+  }
+  catch (err) {
+    console.log(err);
+  }
+}
 module.exports = {
   addArticle,
   modifyArticle,
   deleteArticle,
   allArticles,
   myArticles,
+  PostArticle
 };
