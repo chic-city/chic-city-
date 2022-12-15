@@ -23,6 +23,9 @@ export default function Home() {
 <Link href="/shop" ></Link>
 <Link href="/accessories" ></Link>
 <Link href="/cart" ></Link>
+<Link href="/login" ></Link>
+<Link href="/register" ></Link>
+
 
     </div>
   )
