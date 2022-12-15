@@ -17,7 +17,7 @@ app.get("/", function (req, res) {
   res.json({ message: "Welcome to the Poke-MongoDB RESTful API!" });
 });
 
-const PORT = 5000;
+const PORT = 4000;
 
 app.listen(PORT, function () {
   console.log("Prod-MongoDB RESTful API listening on http://localhost:" + PORT);
