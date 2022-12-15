@@ -1,15 +1,27 @@
 import React from 'react'
+import axios from 'axios'
+import { useEffect,useState } from 'react'
 import Navbar from "./navbar"
 import Footer from './footer'
 const suits = () => {
+const [allSuits,setAllSuits]=useState([])
+  useEffect(() => {
+    axios.get("http://localhost:4000/api/products/").then(res => {
+      setAllSuits(res.data)
+    })
+  }, [])
+  console.log(allSuits,"aziz");
+
   return (
-    <div className="p-3 mb-2 bg-secondary">
+    <div className="p-3 mb-2 bg-secondary" >
         <Navbar/>
         <header>
             
         </header>
-        <section className="py-5">
+        <section className="py-5" >
         <div className="container px-4 px-lg-5 mt-5">
+          
+
                 <div className="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                     <div className="col mb-5">
                         <div className="card h-100 ">
@@ -33,7 +45,7 @@ const suits = () => {
                             <div className="card-body p-4">
                                 <div className="text-center">
                                     {/* <!-- Product name--> */}
-                                    <h5 className="fw-bolder">Special Item</h5>
+                                    <h5 className="fw-bolder">product name</h5>
                                     {/* <!-- Product reviews--> */}
                                     <div className="d-flex justify-content-center small text-warning mb-2">
                                         <div className="bi-star-fill"></div>
@@ -66,6 +78,9 @@ const suits = () => {
                         </div>
                     </div>
                     </div>
+                    
+                    
+                    
                     </div>
                     
                     </section>

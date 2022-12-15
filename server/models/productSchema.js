@@ -10,4 +10,7 @@ var productSchema = mongoose.Schema({
   articleImage:{type:String, require:true}
 });
 
+
+
+
 module.exports = mongoose.model("products", productSchema);

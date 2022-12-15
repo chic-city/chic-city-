@@ -5,8 +5,8 @@ const addArticle = async (req, res) => {
       user: { role, _id },
       body: {
         articleName,
-        description,
         articleType,
+        description,
         availableSizes,
         price,
         articleImage
@@ -24,7 +24,7 @@ const addArticle = async (req, res) => {
       !articleType ||
       !description ||
       !availableSizes ||
-      !price||
+      !price ||
       !articleImage
     ) {
       return res.status.json({
@@ -37,8 +37,8 @@ const addArticle = async (req, res) => {
       articleType,
       description,
       availableSizes,
-      articleImage,
       price,
+      articleImage,
     });
 
     const art = await newArticles.save();
