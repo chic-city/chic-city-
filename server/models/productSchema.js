@@ -10,7 +10,7 @@ var productSchema = mongoose.Schema({
   description: { type: String, require: true },
   availableSizes: { type: Array, require: true },
   availableColor: { type: Array, require: true },
-  type: { type: Array, require: true },
+  // type: { type: Array, require: true },
   category: { type: Array, require: true },
   price: { type: Number, require: true },
 });

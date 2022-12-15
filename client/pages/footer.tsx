@@ -18,10 +18,10 @@ const footer = () => {
     <div className="container mx-auto px-4">
       <div className="flex flex-wrap text-left lg:text-left">
         <div className="w-full lg:w-6/12 px-4">
-          <h4 className="text-3xl fonat-semibold text-blueGray-700">
+          <h4 className="text-3xl fonat-semibold text-blueGray-500">
             Let's keep in touch!
           </h4>
-          <h5 className="text-lg mt-0 mb-2 text-blueGray-600">
+          <h5 className="text-lg mt-0 mb-2 text-light">
             Find us on any of these platforms, we respond 1-2 business days.
           </h5>
           <div className="mt-6 lg:mb-0 mb-6">
@@ -60,7 +60,7 @@ const footer = () => {
               <ul className="list-unstyled">
                 <li>
                   <a
-                    className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                    className="text-light hover:text-blueGray-800 font-semibold block pb-2 text-sm"
                     href="https://www.creative-tim.com/presentation?ref=njs-profile"
                   >
                     About Us
@@ -68,7 +68,7 @@ const footer = () => {
                 </li>
                 <li>
                   <a
-                    className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                    className="text-light hover:text-blueGray-800 font-semibold block pb-2 text-sm"
                     href="https://blog.creative-tim.com?ref=njs-profile"
                   >
                     Blog
@@ -76,7 +76,7 @@ const footer = () => {
                 </li>
                 <li>
                   <a
-                    className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                    className="text-light hover:text-blueGray-800 font-semibold block pb-2 text-sm"
                     href="https://www.github.com/creativetimofficial?ref=njs-profile"
                   >
                     Github
@@ -84,7 +84,7 @@ const footer = () => {
                 </li>
                 <li>
                   <a
-                    className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                    className="text-light hover:text-blueGray-800 font-semibold block pb-2 text-sm"
                     href="https://www.creative-tim.com/bootstrap-themes/free?ref=njs-profile"
                   >
                     Free Products
@@ -99,7 +99,7 @@ const footer = () => {
               <ul className="list-unstyled">
                 <li>
                   <a
-                    className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                    className="text-light hover:text-blueGray-800 font-semibold block pb-2 text-sm"
                     href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile"
                   >
                     MIT License
@@ -107,7 +107,7 @@ const footer = () => {
                 </li>
                 <li>
                   <a
-                    className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                    className="text-light hover:text-blueGray-800 font-semibold block pb-2 text-sm"
                     href="https://creative-tim.com/terms?ref=njs-profile"
                   >
                     Terms &amp; Conditions
@@ -115,7 +115,7 @@ const footer = () => {
                 </li>
                 <li>
                   <a
-                    className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                    className="text-light hover:text-blueGray-800 font-semibold block pb-2 text-sm"
                     href="https://creative-tim.com/privacy?ref=njs-profile"
                   >
                     Privacy Policy
@@ -123,7 +123,7 @@ const footer = () => {
                 </li>
                 <li>
                   <a
-                    className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                    className="text-light hover:text-blueGray-800 font-semibold block pb-2 text-sm"
                     href="https://creative-tim.com/contact-us?ref=njs-profile"
                   >
                     Contact Us
@@ -144,13 +144,13 @@ const footer = () => {
               target="_blank"
             >
               {" "}
-              Notus JS by
+              Walid Slim & 
             </a>
             <a
               href="https://www.creative-tim.com?ref=njs-profile"
               className="text-blueGray-500 hover:text-blueGray-800"
             >
-              Creative Tim
+              CO
             </a>
             .
          
