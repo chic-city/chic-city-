@@ -13,7 +13,7 @@ const images = [
   },
   {
     url:
-      "https://i.pinimg.com/originals/96/10/38/961038f7f8037ece6d48449c4b66675a.jpg"
+      "https://res.cloudinary.com/drd0uckic/image/upload/v1671065453/if0iapqnba1a46atxsif.jpg"
   },
   {url:"https://res.cloudinary.com/dn9qfvg2p/image/upload/q_100/v1671039200/5-idees-looks-et-conseils-pour-une-tenue-classe-pour-homme_t58yxq.jpg"}
 ];
