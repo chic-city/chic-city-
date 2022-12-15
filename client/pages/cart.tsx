@@ -83,16 +83,10 @@ const Cart = () => {
               <div className="card mb-4">
                 <div className="card-body">
                   <p>
-                    <strong>Expected shipping delivery </strong>
+                    <strong>Expected shipping delivery in 24 hours</strong>
                   </p>
                   <p className="mb-0">
-                    {new Date().toLocaleDateString("tr-Tr", {
-                      year: "numeric",
-                      month: "2-digit",
-                      day: "2-digit",
-                      hour: "2-digit",
-                      minute: "2-digit",
-                    })}
+                   
                   </p>
                 </div>
               </div>
