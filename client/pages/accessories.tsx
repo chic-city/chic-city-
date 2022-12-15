@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from "./navbar"
 import Footer from './footer'
-const suits = () => {
+const accessories = () => {
   return (
     <div className="p-3 mb-2 bg-secondary">
         <Navbar/>
@@ -14,21 +14,9 @@ const suits = () => {
                     <div className="col mb-5">
                         <div className="card h-100 ">
                             {/* <!-- Sale badge--> */}
-                            
-                            <div className=" text-white position-absolute"  >
-                                  
-                            <button
-                  type="button"
-                  className="btn btn-danger btn-sm mb-2"
-                  data-mdb-toggle="tooltip"
-                  title="Move to the wish list"
-                >
-                  <i className="fas fa-heart" />
-                </button>
-                            </div>
-                            
+                            <div className="badge bg-dark text-white position-absolute" >Promo</div>
                             {/* <!-- Product image--> */}
-                            <img className="card-img-top" src="https://static.fursac.com/data/cache/LandingPage/picture/main/5/d/19.1606245969.jpg" alt="..." />
+                            <img className="card-img-top" src="https://image.made-in-china.com/155f0j00OmjlbnHccpoJ/2022-Mens-Business-Necktie-Stripe-Suit-Office-Tie-Fashion-Casual-Accessories-for-Men.jpg" alt="..." />
                             {/* <!-- Product details--> */}
                             <div className="card-body p-4">
                                 <div className="text-center">
@@ -41,23 +29,11 @@ const suits = () => {
                                         <div className="bi-star-fill"></div>
                                         <div className="bi-star-fill"></div>
                                         <div className="bi-star-fill"></div>
-                                        
                                     </div>
                                     {/* <!-- Product price--> */}
-                                    
-                                    <h5 className="fw-bolder btn-outline"><select className="form-select text-center " >
-                                    <option defaultValue="S" >Size: S</option>
-                          <option value="M">M</option>
-                          <option value="L">L</option>
-                           <option value="XL">XL</option>
-                                 
-                              </select></h5>
-                              
                                     <span className="text-muted text-decoration-line-through">$20.00</span>
                                     $18.00
-                                    
                                 </div>
-                                
                             </div>
                             {/* <!-- Product actions--> */}
                             <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
@@ -67,12 +43,10 @@ const suits = () => {
                     </div>
                     </div>
                     </div>
-                    
                     </section>
-                    <Footer/>              
+                    <Footer/>
     </div>
-    
   )
 }
 
-export default suits
+export default accessories

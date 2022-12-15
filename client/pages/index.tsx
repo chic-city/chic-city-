@@ -6,6 +6,7 @@ import Carousel from './carousel'
 import Navbar from "./navbar"
 import Footer from './footer'
 import Suits from './suits'
+import shop from './clothing'
 export default function Home() {
   return (
     
@@ -19,6 +20,10 @@ export default function Home() {
   <Link href="/footer" > footer</Link> */}
 <Link href="/carousel" ></Link>
 <Link href="/Suits" ></Link>
+<Link href="/shop" ></Link>
+<Link href="/accessories" ></Link>
+<Link href="/cart" ></Link>
+
     </div>
   )
 }
