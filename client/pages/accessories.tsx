@@ -15,7 +15,9 @@ const accessories = () => {
           
         })
       }, [])
-      console.log(allSuits,"aziz");
+      const add=(body:any)=>{
+        axios.post("http://localhost:4000/api/cart/cart",body)
+       }
 
  return (
     <div className="p-3 mb-2 bg-secondary" >
@@ -78,7 +80,8 @@ title="Move to the wish list"
           </div>
           {/* <!-- Product actions--> */}
           <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
-              <div className="text-center"><a className="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+              <div className="text-center"> <button type="button" className="btn btn-secondary" onClick={()=>{add({articleName:e.articleName,price:e.price,articleImage:e.articleImage,description:e.description})}}> 
+       Buy Now</button></div>
           </div>
       </div>
       {/*  */}
