@@ -1,19 +1,15 @@
 const products = require("../models/productSchema");
-
 const addArticle = async (req, res) => {
   try {
     const {
       user: { role, _id },
       body: {
         articleName,
-        articleType,
-        availableQte,
         description,
+        articleType,
         availableSizes,
-        availableColor,
-        type,
-        category,
         price,
+        articleImage
       },
     } = req;
 
@@ -26,13 +22,10 @@ const addArticle = async (req, res) => {
     if (
       !articleName ||
       !articleType ||
-      !availableQte ||
       !description ||
       !availableSizes ||
-      !availableColor ||
-      !type ||
-      !category ||
-      !price
+      !price||
+      !articleImage
     ) {
       return res.status.json({
         message: " please provide all the required fields ",
@@ -42,13 +35,9 @@ const addArticle = async (req, res) => {
     const newArticles = new products({
       articleName,
       articleType,
-      availableQte,
-      addedBy: _id,
       description,
       availableSizes,
-      availableColor,
-      type,
-      category,
+      articleImage,
       price,
     });
 
@@ -59,6 +48,7 @@ const addArticle = async (req, res) => {
     res.status(500).send(error);
   }
 };
+
 const modifyArticle = async (req, res) => {
   try {
     const {
@@ -129,11 +119,26 @@ const myArticles = async (req, res) => {
     res.status(500).send(error);
   }
 };
+const PostArticle = async (req, res) => {
+console.log("hello");
+  const body = req.body
 
+  try {
+    await newArticles.create(body, (err, result) => {
+      if (err) res.json(err)
+      res.json(result)
+      res.status(200)
+    })
+  }
+  catch (err) {
+    console.log(err);
+  }
+}
 module.exports = {
   addArticle,
   modifyArticle,
   deleteArticle,
   allArticles,
   myArticles,
+  PostArticle
 };

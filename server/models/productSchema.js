@@ -3,16 +3,11 @@ mongoose.Promise = global.Promise;
 
 var productSchema = mongoose.Schema({
   articleName: { type: String, require: true },
-  articleType: { type: String, require: true },
-  availableQte: { type: Number, require: true },
-  addedBy: { type: String, require: true },
-  dateOfCreation: { type: String, default: new Date() },
+  articleType: { type: String, enum: ["suits","shirts", "pants", "blazers", "outerweare", "accessories","shoes"] },
   description: { type: String, require: true },
-  availableSizes: { type: Array, require: true },
-  availableColor: { type: Array, require: true },
-  // type: { type: Array, require: true },
-  category: { type: Array, require: true },
+  availableSizes: { type: String, enum:["XS","S","M","L","XL","XXL"]},
   price: { type: Number, require: true },
+  articleImage:{type:String, require:true}
 });
 
 module.exports = mongoose.model("products", productSchema);
