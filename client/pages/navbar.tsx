@@ -24,19 +24,19 @@ const Navbar = () => {
                         </ul>
 
                         <div className="input-group rounded w-25 ">
-                            <input type="search" className="form-control rounded " placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                            <input type="search" className="form-control rounded text-dark " placeholder="Search " aria-label="Search" aria-describedby="search-addon" />
                             <span className="input-group-text border-0" id="search-addon">
                                 <i className="fas fa-search"  ></i>
                             </span>
                         </div>
-                        <button className="btn  text-dark" type="submit">
+                        <button className="btn  text-dark" type="submit" title="SHOP LIST" onClick={()=>{location.href="/cart"}}>
                             <img src='https://res.cloudinary.com/dn9qfvg2p/image/upload/c_scale,w_33/v1671035218/bag_ppahl3.png' />
                         </button>
-                        <button className="btn  text-dark" type="submit">
+                        <button className="btn  text-dark" type="submit" title="LOGIN">
                             <img src='https://res.cloudinary.com/dn9qfvg2p/image/upload/c_scale,w_33/v1671035073/user_xzrvuk.png' />
                         </button>
-                        <button className="btn  text-dark" type="submit">
-                            <img src='https://res.cloudinary.com/dn9qfvg2p/image/upload/c_scale,w_30/v1671038723/heart_y4chdf.png' />
+                        <button className="btn  text-dark" type="submit" title="WISH LIST" onClick={()=>{location.href="/wishlist"}}>
+                            <img src='https://res.cloudinary.com/dn9qfvg2p/image/upload/c_scale,w_30/v1671038723/heart_y4chdf.png'  />
                         </button>
 
                     </div>

@@ -13,11 +13,9 @@ export default function Home() {
     <div >
 
       <Navbar/>
-      {/* <img src ='https://res.cloudinary.com/dn9qfvg2p/image/upload/c_scale,h_1500,q_100/v1671027251/tenue-classe-pour-homme_qvxxka.jpg'/> */}
       <Carousel/>
       <Footer/>
-  {/* <Link href="/navbar" > navbar</Link>
-  <Link href="/footer" > footer</Link> */}
+
 <Link href="/carousel" ></Link>
 <Link href="/Suits" ></Link>
 <Link href="/shop" ></Link>
@@ -25,7 +23,7 @@ export default function Home() {
 <Link href="/cart" ></Link>
 <Link href="/login" ></Link>
 <Link href="/register" ></Link>
-
+<Link href="/wishlist" ></Link>
 
     </div>
   )
