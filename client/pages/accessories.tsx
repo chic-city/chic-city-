@@ -73,7 +73,7 @@ title="Move to the wish list"
                   
             
                   
-                  ${e.price}
+                  {e.price} DT
                   
               </div>
               

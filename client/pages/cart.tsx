@@ -1,11 +1,13 @@
-import React from "react";
+import React  from "react";
 import Navbar from "./navbar";
 import Footer from "./footer";
 import axios from "axios";
+
+      // @ts-ignore 
 export const getStaticProps=async()=>{
   const res=await axios.get("http://localhost:4000/api/cart/cart")
   const data = await res.data
-
+  
 return {
   props:{data:data}
 }
@@ -14,7 +16,7 @@ return {
 const Cart = ({data}:any) => {
   console.log(data);
   
-
+  
   return (
     <div>
       <Navbar />
@@ -26,20 +28,21 @@ const Cart = ({data}:any) => {
           <div className="row d-flex justify-content-center my-4">
             <div className="col-md-8">
               <div className="card mb-4">
-                <div className="card-header py-3">
-                  <h5 className="mb-0">🛒</h5>
-                </div>
-            {data.map((e:any) => { return( 
-            <div className="card-body">
+               
+          {data.map((e:any) => { return( 
+              
+            <div className="card-body" >
                   {/* Single item */}
-
+                  <div className="card-header py-3">
+                  <h5 className="mb-0"><button onClick={()=>{axios.delete(`http://localhost:4000/api/cart/${e._id}`); window.location.reload()}}>  ✖️</button></h5>
+                </div>
                   <div className="row">
                     <div className="col-lg-3 col-md-12 mb-4 mb-lg-0">
                       {/* Image */}
-                      <div
+                      <div 
                         className="bg-image hover-overlay hover-zoom ripple rounded"
                         data-mdb-ripple-color="light"
-                      ><span className="close">{" "}<button onClick={()=>{axios.delete(`http://localhost:4000/api/cart/${e._id}`); window.location.reload()}}>delete</button></span>
+                      ><span className="close ">{" "}</span>
                         <img
                           src={e.articleImage
                           }
@@ -69,24 +72,14 @@ const Cart = ({data}:any) => {
                     <div className="col-lg-4 col-md-6 mb-4 mb-lg-0">
                       {/* Quantity */}
                       <div className="d-flex mb-4" style={{ maxWidth: 300 }}>
-                        <div className="form-outline ">
-                          <input
-                            id="form1"
-                            min={0}
-                            name="quantity"
-                            defaultValue={1}
-                            type="number"
-                            className="form-control rounded bg-dark w-25 "
-                          />
-                          <span>Quantity</span>
-                        </div>
+                        
                       </div>
                       {/* Quantity */}
                       {/* Price */}
                       <p className="text-start text-md-center">
                         <div className="form-control rounded bg-dark ">
                           {" "}
-                        {e.price} DT
+                        {e.price  }  DT
                         </div>
                       </p>
                       {/* Price */}
@@ -127,7 +120,7 @@ const Cart = ({data}:any) => {
                   <ul className="list-group list-group-flush">
                     <li className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
                       Products
-                      <span>$53.98</span>
+                      <span></span>
                     </li>
                     <li className="list-group-item d-flex justify-content-between align-items-center px-0">
                       Shipping
@@ -141,7 +134,7 @@ const Cart = ({data}:any) => {
                         </strong>
                       </div>
                       <span>
-                        <strong>$53.98</strong>
+                        <strong>DT 53.98</strong>
                       </span>
                     </li>
                   </ul>

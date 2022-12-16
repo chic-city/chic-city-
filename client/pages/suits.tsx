@@ -37,12 +37,14 @@ const [allSuits,setAllSuits]=useState([])
           <div className=" text-white position-absolute"  >
                 
           <button
+          onClick={()=>{add({articleName:e.articleName,price:e.price,articleImage:e.articleImage,description:e.description})}}
 type="button"
 className="btn btn-danger btn-sm mb-2"
 data-mdb-toggle="tooltip"
 title="Move to the wish list"
 >
 <i className="fas fa-heart" />
+
 </button>
           </div>
           
@@ -73,7 +75,7 @@ title="Move to the wish list"
             </select></h5>
             
                   
-                  ${e.price}
+                  {e.price} DT
                   
               </div>
               

@@ -59,7 +59,7 @@ const Register = () => {
                 <br />
                 <div className="wrapper">
                         <button
-                    className="btn btn-danger "
+                    className="btn btn-blueGray-800"
                     type="submit"
                     disabled={!validateForm()}
                   >
@@ -67,8 +67,8 @@ const Register = () => {
                   </button>
                 </div>
                 <Link href="/login" >
-                <div className="mt-3 light">
-                  <p>Sign In</p>
+                <div >
+                  <p className="text-warning" >Sign In</p>
                 </div>
                 </Link>
             </div>

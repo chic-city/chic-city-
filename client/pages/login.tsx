@@ -37,12 +37,12 @@ const Login = () => {
   return (
     <form onSubmit={handleSubmit}>
       <div className="body">
-        <div className="container ">
+        <div className="container justify-content-center ">
           <div>
-            <div className="row h-100 col-sm-7 my-auto ">
+            <div className="row h-100 col-sm-7   ">
               <div className="form-login">
                 <br />
-                <h4 className="h4">Sign In</h4>
+                <h4 className="h4 text-blueGray-500 text-blueGray-800 ">Sign In</h4>
                 <br />
                 <input
                   type="text"
@@ -64,17 +64,18 @@ const Login = () => {
                 <br />
                 <div className="wrapper">
                   <button
-                    className="btn btn-danger "
+                    className="btn btn-blueGray-800 "
                     type="submit"
                     disabled={!validateForm()}
+                    onClick={()=>{location.href="/"}}
                   >
                     Login
                   </button>
 
                 </div>
                 <Link href="/register" >
-                <div className="mt-3 light">
-                  <p>Sign Up</p>
+                <div >
+                  <p className="text-warning">Sign Up</p>
                 </div>
                 </Link>
               </div>
