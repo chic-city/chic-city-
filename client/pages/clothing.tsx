@@ -1,8 +1,9 @@
  import React from 'react'
-import Search from './search'
+
 import Footer from './footer'
 import axios from 'axios'
 import { useEffect,useState } from 'react'
+import Navbar from './navbar'
 const shop = () => {
     // const[search,setSearch]=useState("")
     const [allSuits,setAllSuits]=useState([])
@@ -24,7 +25,7 @@ const shop = () => {
  return (
     
     <div className="p-3 mb-2 bg-secondary" >
-        <Search/>
+        <Navbar/>
         <header>
   
         </header>
@@ -82,7 +83,7 @@ title="Move to the wish list"
             </select></h5>
             
                   
-                  ${e.price}
+                  {e.price} DT
                   
               </div>
               

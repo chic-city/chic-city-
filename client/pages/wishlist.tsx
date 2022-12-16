@@ -11,7 +11,17 @@ import {
   } from "mdb-react-ui-kit";
 import Navbar from './navbar';
 import Footer from './footer';
-const wishlist = () => {
+import axios from "axios";
+export const getStaticProps=async()=>{
+  const res=await axios.get("http://localhost:4000/api/cart/cart")
+  const data = await res.data
+  return {
+    props:{data:data}
+  }
+}
+
+const wishlist = ({data}:any) => {
+  console.log(data);
   return (
     <div>
    <Navbar/>
@@ -23,35 +33,26 @@ const wishlist = () => {
               <img className="h2" src='https://res.cloudinary.com/drd0uckic/image/upload/c_scale,w_100/v1671119952/gjph6zfgn1owxmlvl2hj.png'/>
              
             </p>
-
+            {data.map((e:any) => { return( 
             <MDBCard className="mb-4">
               <MDBCardBody className="p-4">
                 <MDBRow className="align-items-center">
                   <MDBCol md="2">
                     <MDBCardImage
                       fluid
-                      src="https://static.fursac.com/data/cache/LandingPage/picture/main/5/d/19.1606245969.jpg"
+                      src={e.articleImage
+                          }
                       alt="Generic placeholder image"
                     />
                   </MDBCol>
                   <MDBCol md="2" className="d-flex justify-content-center">
                     <div>
-                      <p className="small text-muted mb-4 pb-2">Product Name</p>
-                      <p className="lead fw-normal mb-0">Suits</p>
+                      <p className="small text-muted mb-4 pb-2">{e.articleName}</p>
+                      <p className="lead fw-normal mb-0"> <button onClick={()=>{axios.delete(`http://localhost:4000/api/cart/${e._id}`); window.location.reload()}}>❌</button> </p>
                     </div>
                   </MDBCol>
                   <MDBCol md="2" className="d-flex justify-content-center">
-                    <div>
-                      <p className="small text-muted mb-4 pb-2">Color</p>
-                      <p className="lead fw-normal mb-0">
-                        <MDBIcon
-                          fas
-                          icon="circle me-2"
-                          style={{ color: "#fdd8d2" }}
-                        />
-                        DARK
-                      </p>
-                    </div>
+                    
                   </MDBCol>
                   <MDBCol md="2" className="d-flex justify-content-center">
                     <div>
@@ -62,14 +63,14 @@ const wishlist = () => {
                   <MDBCol md="2" className="d-flex justify-content-center">
                     <div>
                       <p className="small text-muted mb-4 pb-2">Price</p>
-                      <p className="lead fw-normal mb-0"> 799 Dt </p>
+                      <p className="lead fw-normal mb-0"> {e.price  } Dt </p>
                     </div>
                   </MDBCol>
                   
                  
                 </MDBRow>
               </MDBCardBody>
-            </MDBCard>
+            </MDBCard>)})}
 
             <MDBCard className="mb-5">
               <MDBCardBody className="p-4">
@@ -84,9 +85,9 @@ const wishlist = () => {
 
             <div className="d-flex justify-content-end ">
               <MDBBtn color="light" size="lg" className="me-2" href="/">
-                Continue shopping
+                Continue shopping 
               </MDBBtn>
-              <button type="button" className="btn btn-primary btn-lg btn-dark">
+              <button type="button" className="btn btn-primary btn-lg btn-dark" onClick={()=>{window.location.href= '/cart'}}>
               ADD TO CART
             </button>
             </div>
